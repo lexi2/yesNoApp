@@ -1,24 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9ql-rW-7zx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Options-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Options" id="BYZ-38-t0r" customClass="ViewController" customModule="YesNoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6N-y0-CVc">
+                                <rect key="frame" x="16" y="249" width="164" height="169"/>
+                                <state key="normal" image="Green Tick"/>
+                                <connections>
+                                    <action selector="optionOneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bJE-6A-mUi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWi-84-Dd9">
+                                <rect key="frame" x="196" y="249" width="163" height="169"/>
+                                <state key="normal" image="Red Cross"/>
+                                <connections>
+                                    <action selector="optionTwoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MSC-OZ-D6c"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jq-fx-SMj">
+                                <rect key="frame" x="59" y="438" width="78" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="DIW-jy-WdG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adb-p3-Vwt">
+                                <rect key="frame" x="243" y="438" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.090196078430000007" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dWi-84-Dd9" secondAttribute="bottom" constant="249" id="2Oy-4h-Rid"/>
+                            <constraint firstItem="6jq-fx-SMj" firstAttribute="baseline" secondItem="adb-p3-Vwt" secondAttribute="baseline" id="4Gf-Gn-1hG"/>
+                            <constraint firstItem="6jq-fx-SMj" firstAttribute="top" secondItem="u6N-y0-CVc" secondAttribute="bottom" constant="8" symbolic="YES" id="6fg-Uv-AfP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dWi-84-Dd9" secondAttribute="trailing" constant="16" id="9PH-oV-YES"/>
+                            <constraint firstItem="dWi-84-Dd9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Gxq-nr-TQh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u6N-y0-CVc" secondAttribute="bottom" constant="249" id="HPX-g7-u2G"/>
+                            <constraint firstItem="dWi-84-Dd9" firstAttribute="leading" secondItem="u6N-y0-CVc" secondAttribute="trailing" constant="16" id="TE7-eM-azj"/>
+                            <constraint firstItem="u6N-y0-CVc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="h26-Yf-lOg"/>
+                            <constraint firstItem="dWi-84-Dd9" firstAttribute="leading" secondItem="u6N-y0-CVc" secondAttribute="trailing" constant="16" id="j96-me-qU3"/>
+                            <constraint firstItem="u6N-y0-CVc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lLu-oV-Nr8"/>
+                            <constraint firstItem="6jq-fx-SMj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="lcS-jN-8pH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="adb-p3-Vwt" secondAttribute="trailing" constant="54" id="pCL-VB-zef"/>
+                            <constraint firstItem="6jq-fx-SMj" firstAttribute="centerX" secondItem="u6N-y0-CVc" secondAttribute="centerX" id="qgh-Ud-D3S"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Yes or No" id="aKa-1t-AjL"/>
+                    <connections>
+                        <outlet property="optionOneLabel" destination="6jq-fx-SMj" id="zeE-dV-L8j"/>
+                        <outlet property="optionTwoLabel" destination="adb-p3-Vwt" id="cV4-hc-fHG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1044" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4s7-Iz-30T">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9ql-rW-7zx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="emI-9u-B1d">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2ni-Jj-BDf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cVD-87-XhS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104.8" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Green Tick" width="164" height="161"/>
+        <image name="Red Cross" width="164" height="161"/>
+    </resources>
 </document>

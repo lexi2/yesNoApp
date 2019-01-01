@@ -8,12 +8,27 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+// Button actions
+    @IBAction func optionOneButton(_ sender: UIButton) {
+    }
+    
+
+    @IBAction func optionTwoButton(_ sender: UIButton) {
+    }
+//Label options
+    @IBOutlet weak var optionOneLabel: UILabel!
+    @IBOutlet weak var optionTwoLabel: UILabel!
+
+
+
+
 
 
 }
